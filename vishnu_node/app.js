@@ -25,7 +25,7 @@ const event_model = require('./events.model');
 let events = data;
 
 
-app.use('/api', express.static(path.join(__dirname, '/../app/dist/')));
+app.use('/api', express.static(path.join(__dirname, '/../vishnu_vue/dist/')));
 app.use(express.static(path.join(__dirname, '/public/')));
 
 http.createServer(app).listen(port, () => {
