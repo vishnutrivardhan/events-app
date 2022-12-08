@@ -26,7 +26,7 @@ export default {
   methods: {
     async deleteEvent(id) {
       console.log("deleteEvent", id);
-      await fetch("http://localhost/api/delete-event/" + id, {
+      await fetch("http://174.138.40.202/api/delete-event/" + id, {
         method: "DELETE",
       });
       this.fetchEvents();
@@ -35,7 +35,7 @@ export default {
       // Add id to event
       const id = Math.floor(Math.random() * 10000) + 1;
       const newEvent = { id, ...event };
-      await fetch("http://localhost/api/add-event", {
+      await fetch("http://174.138.40.202/api/add-event", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -46,7 +46,7 @@ export default {
     },
     async fetchEvents() {
       // Fetch events from API
-      const res = await fetch("http://localhost/api/events", {
+      const res = await fetch("http://174.138.40.202/api/events", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
