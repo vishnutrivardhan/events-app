@@ -1,0 +1,130 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 5fr auto;
+  padding: 10px 50px;
+}
+.italic {
+  font-style: italic;
+  margin: 0;
+}
+nav h1 {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 150%;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul li.contact-btn-li a {
+  background-color: orangered;
+  color: #fff;
+  padding: 10px 20px;
+}
+.body-section {
+  padding: 50px 50px;
+}
+
+h1 {
+  font-size: 300%;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+p {
+  font-size: 120%;
+  width: 70%;
+}
+
+.hi-section .get-in-touch-btn {
+  background-color: orangered;
+  color: #fff;
+  display: block;
+  border: none;
+  padding: 10px 30px;
+  font-size: 110%;
+}
+.hi-section .scroll-btn {
+  display: block;
+  margin: 30px auto;
+  background-color: gray;
+  color: #fff;
+  border: none;
+  padding: 20px 30px;
+}
+.blog-section h1 {
+  text-align: center;
+}
+.blog-section section {
+  background-color: lightgray;
+  padding: 20px 20px;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+.blog-section section .img-container img {
+  width: 100%;
+}
+.blog-container {
+  margin-left: 30px;
+}
+.blog-section section h5 {
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+
+.contact-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+.contact-section ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0 auto;
+}
+.contact-section ul li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0 20px;
+}
+.contact-section ul li div {
+  border: 1px solid black;
+  padding: 20px 20px;
+}
+footer {
+  background-color: lightgray;
+  margin: 0;
+  padding: 20px 100px;
+}
+footer ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 0;
+}
+footer ul li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0 20px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: gray;
+  margin: 0;
+  padding: 0;
+}
+footer ul li a img {
+  height: 30px;
+}
