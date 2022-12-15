@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const mongo_url = 'mongodb+srv://vishnu:Vishnu1243@events-app.1pyjefz.mongodb.net/events?retryWrites=true&w=majority';
 mongoose.connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log('MongoDB connected successfully')).catch(err => console.log(err));
 const server = http.createServer((req, res) => {
-    if (req.url === '/api') {
+    if (req.url === '/api' || req.url === '/api/') {
         event_model.find().then(events => {
             res.setHeader("Access-Control-Allow-Origin", '*')
             res.writeHead(200, { "Content-Type": 'application/json' });
