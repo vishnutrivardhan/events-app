@@ -1,22 +1,21 @@
 <template>
   <div class="container">
     <AppHeader />
+
     <AppEvents @delete-event="deleteEvent" :events="events" />
 
-    <AddEvent @add-event="addEvent"></AddEvent>
+    <!-- <AddEvent @add-event="addEvent"></AddEvent> -->
   </div>
 </template>
 
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppEvents from "./components/AppEvents.vue";
-import AddEvent from "./components/AddEvent.vue";
 export default {
   name: "App",
   components: {
     AppHeader,
     AppEvents,
-    AddEvent,
   },
   data() {
     return {
@@ -26,7 +25,7 @@ export default {
   methods: {
     async deleteEvent(id) {
       console.log("deleteEvent", id);
-      await fetch("http://174.138.40.202/api/delete-event/" + id, {
+      await fetch("http://localhost:5959/api/delete-event/" + id, {
         method: "DELETE",
       });
       this.fetchEvents();
@@ -35,7 +34,7 @@ export default {
       // Add id to event
       const id = Math.floor(Math.random() * 10000) + 1;
       const newEvent = { id, ...event };
-      await fetch("http://174.138.40.202/api/add-event", {
+      await fetch("http://localhost:5959/api/add-event", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -46,7 +45,7 @@ export default {
     },
     async fetchEvents() {
       // Fetch events from API
-      const res = await fetch("http://174.138.40.202/api/events", {
+      const res = await fetch("http://localhost:5959/api/events", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -77,3 +76,5 @@ export default {
   box-sizing: border-box;
 }
 </style>
+
+
